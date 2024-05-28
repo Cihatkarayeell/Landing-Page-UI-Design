@@ -1,0 +1,43 @@
+{
+  // https://snippet-generator.app/
+  "Xs Breakpoints": {
+    "prefix": "xsset",
+    "body": ["@include xs {", "  ", "}", "", "@include bigger-than-xs {", "   ", "}", ""],
+    "description": "Sm Breakpoints"
+  },
+  "Sm Breakpoints": {
+    "prefix": "smset",
+    "body": ["@include sm {", "  ", "}", "", "@include bigger-than-sm {", "   ", "}", ""],
+    "description": "Sm Breakpoints"
+  },
+  "Md Breakpoints": {
+    "prefix": "mdset",
+    "body": ["@include md {", "  ", "}", "", "@include bigger-than-md {", "   ", "}", ""],
+    "description": "Md Breakpoints"
+  },
+  "Lg Breakpoints": {
+    "prefix": "lgset",
+    "body": ["@include lg {", "  ", "}", "", "@include bigger-than-lg {", "   ", "}", ""],
+    "description": "Lg Breakpoints"
+  },
+  "Xl Breakpoints": {
+    "prefix": "xlset",
+    "body": ["@include xl {", "  ", "}", "", "@include bigger-than-xl {", "   ", "}", ""],
+    "description": "Xl Breakpoints"
+  },
+  "Absolute Center": {
+    "prefix": "abs-center",
+    "body": ["@include center(both);"],
+    "description": "Absolute element center"
+  },
+  "Base64 1x1 img for Lazyload Images": {
+    "prefix": "b64",
+    "body": ["src=\"data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20768%20432%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E\""],
+    "description": "Base64 1x1 img"
+  },
+  "Picture": {
+    "prefix": "picture",
+    "body": ["<picture>", "        <source", "          media=\"(min-width:1365px)\"", "          srcset=\"dist/img/demo/2.jpg\"", "        />", "        <source", "          media=\"(min-width:980px)\"", "          srcset=\"dist/img/demo/2.jpg\"", "        />", "        <source", "          media=\"(min-width:640px)\"", "          srcset=\"dist/img/demo/2.jpg\"", "        />", "        <img src=\"dist/img/demo/2.jpg\" alt=\" \" />", "      </picture>"],
+    "description": "Picture tag with breakpoints"
+  }
+}

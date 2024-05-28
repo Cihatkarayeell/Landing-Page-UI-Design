@@ -1,0 +1,805 @@
+{# prettier-ignore #}
+{% extends "./layout/layout-general.html" %}
+{% block title %}Front end Starter Kit{% endblock %}
+{%block bodyClass %}body-home{% endblock %} {% block content %}
+
+<body>
+    <section class="hero">
+        <div class="container">
+            <div class="header">
+                <h1 class="title">Free UI resources for everyone</h1>
+                <div class="desc">The largest database of 100% free UI components and designs available in the formats popular by UI designers.</div>
+            </div>
+            <div class="search-box">
+                <div class="search-box-dropdown">
+                    <span id="search-value">Free designs</span>
+                    <div class="icon">
+                        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.25L9 8.75L16.5 1.25" stroke="#202142" stroke-width="1.875" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="dropdown-box">
+                        <div class="dropdown-item" id="item1">Free designs 1</div>
+                        <div class="dropdown-item" id="item2">Free designs 2</div>
+                        <div class="dropdown-item" id="item3">Free designs 3</div>
+                    </div>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="search">
+                    <div class="icon">
+                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1_515)">
+                                <path
+                                    d="M14.1667 24.0833C19.6435 24.0833 24.0833 19.6435 24.0833 14.1667C24.0833 8.68984 19.6435 4.25 14.1667 4.25C8.68984 4.25 4.25 8.68984 4.25 14.1667C4.25 19.6435 8.68984 24.0833 14.1667 24.0833Z"
+                                    stroke="#202142" stroke-width="2.125" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M29.75 29.75L21.25 21.25" stroke="#202142" stroke-width="2.125" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1_515">
+                                    <rect width="34" height="34" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                    </div>
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="main-container">
+        <div class="container">
+            <div class="header">
+                <div class="filters-toggle">
+                    <div class="filter-box">
+                        <button class="filter-btn active" id="latest">Latest</button>
+                        <button class="filter-btn" id="popular">Popular</button>
+                        <div class="backg" id="background"></div>
+                    </div>
+                </div>
+                <div class="filters-tab">
+                    <button class="tab-item active" data-filter="all">All</button>
+                    <button class="tab-item" data-filter="web">web</button>
+                    <button class="tab-item" data-filter="mobile">mobile</button>
+                    <button class="tab-item" data-filter="ui-kit">UI kit</button>
+                    <button class="tab-item" data-filter="coded">coded</button>
+                </div>
+                <div class="filters-wrapper">
+                    <div class="filter-item" data-filter="figma">
+                        <div class="icon">
+                            <img src="./img/icon/figma.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="filter-item" data-filter="skecth">
+                        <div class="icon">
+                            <img src="./img/icon/skecth.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="filter-item" data-filter="invision">
+                        <div class="icon">
+                            <img src="./img/icon/invision.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="filter-item" data-filter="xd">
+                        <div class="icon">
+                            <img src="./img/icon/xd.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="filter-item" data-filter="ps">
+                        <div class="icon">
+                            <img src="./img/icon/ps.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="all-cards-wrapper">
+                <a href="#" class="card-item web" data-category="skecth">
+                    <div class="card-img">
+                        <img src="./img/general/card-img-1.png" alt="">
+                        <div class="design-tool">
+                            <img src="./img/icon/skecth.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="creater d-flex align-items-center">
+                            <div class="img">
+                                <img src="./img/general/card-creater.png" alt="">
+                            </div>
+                            <div class="title">by 
+                                <div class="name">Jenny Molla</div>
+                            </div>
+                        </div>
+                        <div class="info d-flex">
+                            <div class="info-item" id="code">
+                                <img src="./img/icon/code.svg" alt="">
+                                <span>25</span>
+                            </div>
+                            <div class="info-item" id="like">
+                                <img src="./img/icon/like.svg" alt="">
+                                <span>25</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-item web" data-category="figma">
+                    <div class="card-img">
+                        <img src="./img/general/card-img-2.png" alt="">
+                        <div class="design-tool">
+                            <img src="./img/icon/figma.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="creater d-flex align-items-center">
+                            <div class="img">
+                                <img src="./img/general/card-creater.png" alt="">
+                            </div>
+                            <div class="title">by
+                                <div class="name">Jenny Molla</div>
+                            </div>
+                        </div>
+                        <div class="info d-flex">
+                            <div class="info-item" id="code">
+                                <img src="./img/icon/code.svg" alt="">
+                                <span>25</span>
+                            </div>
+                            <div class="info-item" id="like">
+                                <img src="./img/icon/like.svg" alt="">
+                                <span>25</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-item mobile" data-category="xd">
+                    <div class="card-img">
+                        <img src="./img/general/card-img-3.png" alt="">
+                        <div class="design-tool">
+                            <img src="./img/icon/xd.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="creater d-flex align-items-center">
+                            <div class="img">
+                                <img src="./img/general/card-creater.png" alt="">
+                            </div>
+                            <div class="title">by
+                                <div class="name">Jenny Molla</div>
+                            </div>
+                        </div>
+                        <div class="info d-flex">
+                            <div class="info-item" id="code">
+                                <img src="./img/icon/code.svg" alt="">
+                                <span>25</span>
+                            </div>
+                            <div class="info-item" id="like">
+                                <img src="./img/icon/like.svg" alt="">
+                                <span>25</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-item mobile" data-category="ps">
+                    <div class="card-img">
+                        <img src="./img/general/card-img-2.png" alt="">
+                        <div class="design-tool">
+                            <img src="./img/icon/ps.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="creater d-flex align-items-center">
+                            <div class="img">
+                                <img src="./img/general/card-creater.png" alt="">
+                            </div>
+                            <div class="title">by
+                                <div class="name">Jenny Molla</div>
+                            </div>
+                        </div>
+                        <div class="info d-flex">
+                            <div class="info-item" id="code">
+                                <img src="./img/icon/code.svg" alt="">
+                                <span>25</span>
+                            </div>
+                            <div class="info-item" id="like">
+                                <img src="./img/icon/like.svg" alt="">
+                                <span>25</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-item ui-kit" data-category="invision">
+                    <div class="card-img">
+                        <img src="./img/general/card-img-3.png" alt="">
+                        <div class="design-tool">
+                            <img src="./img/icon/invision.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="creater d-flex align-items-center">
+                            <div class="img">
+                                <img src="./img/general/card-creater.png" alt="">
+                            </div>
+                            <div class="title">by
+                                <div class="name">Jenny Molla</div>
+                            </div>
+                        </div>
+                        <div class="info d-flex">
+                            <div class="info-item" id="code">
+                                <img src="./img/icon/code.svg" alt="">
+                                <span>25</span>
+                            </div>
+                            <div class="info-item" id="like">
+                                <img src="./img/icon/like.svg" alt="">
+                                <span>25</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-item coded" data-category="skecth">
+                    <div class="card-img">
+                        <img src="./img/general/card-img-1.png" alt="">
+                        <div class="design-tool">
+                            <img src="./img/icon/skecth.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="creater d-flex align-items-center">
+                            <div class="img">
+                                <img src="./img/general/card-creater.png" alt="">
+                            </div>
+                            <div class="title">by
+                                <div class="name">Jenny Molla</div>
+                            </div>
+                        </div>
+                        <div class="info d-flex">
+                            <div class="info-item" id="code">
+                                <img src="./img/icon/code.svg" alt="">
+                                <span>25</span>
+                            </div>
+                            <div class="info-item" id="like">
+                                <img src="./img/icon/like.svg" alt="">
+                                <span>25</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-item coded" data-category="skecth">
+                    <div class="card-img">
+                        <img src="./img/general/card-img-2.png" alt="">
+                        <div class="design-tool">
+                            <img src="./img/icon/skecth.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="creater d-flex align-items-center">
+                            <div class="img">
+                                <img src="./img/general/card-creater.png" alt="">
+                            </div>
+                            <div class="title">by
+                                <div class="name">Jenny Molla</div>
+                            </div>
+                        </div>
+                        <div class="info d-flex">
+                            <div class="info-item" id="code">
+                                <img src="./img/icon/code.svg" alt="">
+                                <span>25</span>
+                            </div>
+                            <div class="info-item" id="like">
+                                <img src="./img/icon/like.svg" alt="">
+                                <span>25</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-item mobile" data-category="xd">
+                    <div class="card-img">
+                        <img src="./img/general/card-img-3.png" alt="">
+                        <div class="design-tool">
+                            <img src="./img/icon/xd.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="creater d-flex align-items-center">
+                            <div class="img">
+                                <img src="./img/general/card-creater.png" alt="">
+                            </div>
+                            <div class="title">by
+                                <div class="name">Jenny Molla</div>
+                            </div>
+                        </div>
+                        <div class="info d-flex">
+                            <div class="info-item" id="code">
+                                <img src="./img/icon/code.svg" alt="">
+                                <span>25</span>
+                            </div>
+                            <div class="info-item" id="like">
+                                <img src="./img/icon/like.svg" alt="">
+                                <span>25</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-item mobile" data-category="ps">
+                    <div class="card-img">
+                        <img src="./img/general/card-img-2.png" alt="">
+                        <div class="design-tool">
+                            <img src="./img/icon/ps.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="creater d-flex align-items-center">
+                            <div class="img">
+                                <img src="./img/general/card-creater.png" alt="">
+                            </div>
+                            <div class="title">by
+                                <div class="name">Jenny Molla</div>
+                            </div>
+                        </div>
+                        <div class="info d-flex">
+                            <div class="info-item" id="code">
+                                <img src="./img/icon/code.svg" alt="">
+                                <span>25</span>
+                            </div>
+                            <div class="info-item" id="like">
+                                <img src="./img/icon/like.svg" alt="">
+                                <span>25</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-item web" data-category="skecth">
+                    <div class="card-img">
+                        <img src="./img/general/card-img-1.png" alt="">
+                        <div class="design-tool">
+                            <img src="./img/icon/skecth.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="creater d-flex align-items-center">
+                            <div class="img">
+                                <img src="./img/general/card-creater.png" alt="">
+                            </div>
+                            <div class="title">by
+                                <div class="name">Jenny Molla</div>
+                            </div>
+                        </div>
+                        <div class="info d-flex">
+                            <div class="info-item" id="code">
+                                <img src="./img/icon/code.svg" alt="">
+                                <span>25</span>
+                            </div>
+                            <div class="info-item" id="like">
+                                <img src="./img/icon/like.svg" alt="">
+                                <span>25</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-item web" data-category="skecth">
+                    <div class="card-img">
+                        <img src="./img/general/card-img-1.png" alt="">
+                        <div class="design-tool">
+                            <img src="./img/icon/skecth.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="creater d-flex align-items-center">
+                            <div class="img">
+                                <img src="./img/general/card-creater.png" alt="">
+                            </div>
+                            <div class="title">by
+                                <div class="name">Jenny Molla</div>
+                            </div>
+                        </div>
+                        <div class="info d-flex">
+                            <div class="info-item" id="code">
+                                <img src="./img/icon/code.svg" alt="">
+                                <span>25</span>
+                            </div>
+                            <div class="info-item" id="like">
+                                <img src="./img/icon/like.svg" alt="">
+                                <span>25</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-item web" data-category="figma">
+                    <div class="card-img">
+                        <img src="./img/general/card-img-2.png" alt="">
+                        <div class="design-tool">
+                            <img src="./img/icon/figma.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="creater d-flex align-items-center">
+                            <div class="img">
+                                <img src="./img/general/card-creater.png" alt="">
+                            </div>
+                            <div class="title">by
+                                <div class="name">Jenny Molla</div>
+                            </div>
+                        </div>
+                        <div class="info d-flex">
+                            <div class="info-item" id="code">
+                                <img src="./img/icon/code.svg" alt="">
+                                <span>25</span>
+                            </div>
+                            <div class="info-item" id="like">
+                                <img src="./img/icon/like.svg" alt="">
+                                <span>25</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-item mobile" data-category="xd">
+                    <div class="card-img">
+                        <img src="./img/general/card-img-3.png" alt="">
+                        <div class="design-tool">
+                            <img src="./img/icon/xd.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="creater d-flex align-items-center">
+                            <div class="img">
+                                <img src="./img/general/card-creater.png" alt="">
+                            </div>
+                            <div class="title">by
+                                <div class="name">Jenny Molla</div>
+                            </div>
+                        </div>
+                        <div class="info d-flex">
+                            <div class="info-item" id="code">
+                                <img src="./img/icon/code.svg" alt="">
+                                <span>25</span>
+                            </div>
+                            <div class="info-item" id="like">
+                                <img src="./img/icon/like.svg" alt="">
+                                <span>25</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-item mobile" data-category="ps">
+                    <div class="card-img">
+                        <img src="./img/general/card-img-2.png" alt="">
+                        <div class="design-tool">
+                            <img src="./img/icon/ps.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="creater d-flex align-items-center">
+                            <div class="img">
+                                <img src="./img/general/card-creater.png" alt="">
+                            </div>
+                            <div class="title">by
+                                <div class="name">Jenny Molla</div>
+                            </div>
+                        </div>
+                        <div class="info d-flex">
+                            <div class="info-item" id="code">
+                                <img src="./img/icon/code.svg" alt="">
+                                <span>25</span>
+                            </div>
+                            <div class="info-item" id="like">
+                                <img src="./img/icon/like.svg" alt="">
+                                <span>25</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-item ui-kit" data-category="invision">
+                    <div class="card-img">
+                        <img src="./img/general/card-img-3.png" alt="">
+                        <div class="design-tool">
+                            <img src="./img/icon/invision.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="creater d-flex align-items-center">
+                            <div class="img">
+                                <img src="./img/general/card-creater.png" alt="">
+                            </div>
+                            <div class="title">by
+                                <div class="name">Jenny Molla</div>
+                            </div>
+                        </div>
+                        <div class="info d-flex">
+                            <div class="info-item" id="code">
+                                <img src="./img/icon/code.svg" alt="">
+                                <span>25</span>
+                            </div>
+                            <div class="info-item" id="like">
+                                <img src="./img/icon/like.svg" alt="">
+                                <span>25</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-item coded" data-category="skecth">
+                    <div class="card-img">
+                        <img src="./img/general/card-img-1.png" alt="">
+                        <div class="design-tool">
+                            <img src="./img/icon/skecth.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="creater d-flex align-items-center">
+                            <div class="img">
+                                <img src="./img/general/card-creater.png" alt="">
+                            </div>
+                            <div class="title">by
+                                <div class="name">Jenny Molla</div>
+                            </div>
+                        </div>
+                        <div class="info d-flex">
+                            <div class="info-item" id="code">
+                                <img src="./img/icon/code.svg" alt="">
+                                <span>25</span>
+                            </div>
+                            <div class="info-item" id="like">
+                                <img src="./img/icon/like.svg" alt="">
+                                <span>25</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-item web" data-category="figma">
+                    <div class="card-img">
+                        <img src="./img/general/card-img-2.png" alt="">
+                        <div class="design-tool">
+                            <img src="./img/icon/figma.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="creater d-flex align-items-center">
+                            <div class="img">
+                                <img src="./img/general/card-creater.png" alt="">
+                            </div>
+                            <div class="title">by
+                                <div class="name">Jenny Molla</div>
+                            </div>
+                        </div>
+                        <div class="info d-flex">
+                            <div class="info-item" id="code">
+                                <img src="./img/icon/code.svg" alt="">
+                                <span>25</span>
+                            </div>
+                            <div class="info-item" id="like">
+                                <img src="./img/icon/like.svg" alt="">
+                                <span>25</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-item coded" data-category="skecth">
+                    <div class="card-img">
+                        <img src="./img/general/card-img-2.png" alt="">
+                        <div class="design-tool">
+                            <img src="./img/icon/skecth.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="creater d-flex align-items-center">
+                            <div class="img">
+                                <img src="./img/general/card-creater.png" alt="">
+                            </div>
+                            <div class="title">by
+                                <div class="name">Jenny Molla</div>
+                            </div>
+                        </div>
+                        <div class="info d-flex">
+                            <div class="info-item" id="code">
+                                <img src="./img/icon/code.svg" alt="">
+                                <span>25</span>
+                            </div>
+                            <div class="info-item" id="like">
+                                <img src="./img/icon/like.svg" alt="">
+                                <span>25</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-item mobile" data-category="xd">
+                    <div class="card-img">
+                        <img src="./img/general/card-img-3.png" alt="">
+                        <div class="design-tool">
+                            <img src="./img/icon/xd.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="creater d-flex align-items-center">
+                            <div class="img">
+                                <img src="./img/general/card-creater.png" alt="">
+                            </div>
+                            <div class="title">by
+                                <div class="name">Jenny Molla</div>
+                            </div>
+                        </div>
+                        <div class="info d-flex">
+                            <div class="info-item" id="code">
+                                <img src="./img/icon/code.svg" alt="">
+                                <span>25</span>
+                            </div>
+                            <div class="info-item" id="like">
+                                <img src="./img/icon/like.svg" alt="">
+                                <span>25</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-item web" data-category="figma">
+                    <div class="card-img">
+                        <img src="./img/general/card-img-2.png" alt="">
+                        <div class="design-tool">
+                            <img src="./img/icon/figma.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="creater d-flex align-items-center">
+                            <div class="img">
+                                <img src="./img/general/card-creater.png" alt="">
+                            </div>
+                            <div class="title">by
+                                <div class="name">Jenny Molla</div>
+                            </div>
+                        </div>
+                        <div class="info d-flex">
+                            <div class="info-item" id="code">
+                                <img src="./img/icon/code.svg" alt="">
+                                <span>25</span>
+                            </div>
+                            <div class="info-item" id="like">
+                                <img src="./img/icon/like.svg" alt="">
+                                <span>25</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-item mobile" data-category="ps">
+                    <div class="card-img">
+                        <img src="./img/general/card-img-2.png" alt="">
+                        <div class="design-tool">
+                            <img src="./img/icon/ps.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="creater d-flex align-items-center">
+                            <div class="img">
+                                <img src="./img/general/card-creater.png" alt="">
+                            </div>
+                            <div class="title">by
+                                <div class="name">Jenny Molla</div>
+                            </div>
+                        </div>
+                        <div class="info d-flex">
+                            <div class="info-item" id="code">
+                                <img src="./img/icon/code.svg" alt="">
+                                <span>25</span>
+                            </div>
+                            <div class="info-item" id="like">
+                                <img src="./img/icon/like.svg" alt="">
+                                <span>25</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-item web" data-category="skecth">
+                    <div class="card-img">
+                        <img src="./img/general/card-img-1.png" alt="">
+                        <div class="design-tool">
+                            <img src="./img/icon/skecth.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="creater d-flex align-items-center">
+                            <div class="img">
+                                <img src="./img/general/card-creater.png" alt="">
+                            </div>
+                            <div class="title">by
+                                <div class="name">Jenny Molla</div>
+                            </div>
+                        </div>
+                        <div class="info d-flex">
+                            <div class="info-item" id="code">
+                                <img src="./img/icon/code.svg" alt="">
+                                <span>25</span>
+                            </div>
+                            <div class="info-item" id="like">
+                                <img src="./img/icon/like.svg" alt="">
+                                <span>25</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-item web" data-category="figma">
+                    <div class="card-img">
+                        <img src="./img/general/card-img-2.png" alt="">
+                        <div class="design-tool">
+                            <img src="./img/icon/figma.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="creater d-flex align-items-center">
+                            <div class="img">
+                                <img src="./img/general/card-creater.png" alt="">
+                            </div>
+                            <div class="title">by
+                                <div class="name">Jenny Molla</div>
+                            </div>
+                        </div>
+                        <div class="info d-flex">
+                            <div class="info-item" id="code">
+                                <img src="./img/icon/code.svg" alt="">
+                                <span>25</span>
+                            </div>
+                            <div class="info-item" id="like">
+                                <img src="./img/icon/like.svg" alt="">
+                                <span>25</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-item web" data-category="figma">
+                    <div class="card-img">
+                        <img src="./img/general/card-img-2.png" alt="">
+                        <div class="design-tool">
+                            <img src="./img/icon/figma.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="creater d-flex align-items-center">
+                            <div class="img">
+                                <img src="./img/general/card-creater.png" alt="">
+                            </div>
+                            <div class="title">by
+                                <div class="name">Jenny Molla</div>
+                            </div>
+                        </div>
+                        <div class="info d-flex">
+                            <div class="info-item" id="code">
+                                <img src="./img/icon/code.svg" alt="">
+                                <span>25</span>
+                            </div>
+                            <div class="info-item" id="like">
+                                <img src="./img/icon/like.svg" alt="">
+                                <span>25</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-item web" data-category="figma">
+                    <div class="card-img">
+                        <img src="./img/general/card-img-2.png" alt="">
+                        <div class="design-tool">
+                            <img src="./img/icon/figma.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="creater d-flex align-items-center">
+                            <div class="img">
+                                <img src="./img/general/card-creater.png" alt="">
+                            </div>
+                            <div class="title">by
+                                <div class="name">Jenny Molla</div>
+                            </div>
+                        </div>
+                        <div class="info d-flex">
+                            <div class="info-item" id="code">
+                                <img src="./img/icon/code.svg" alt="">
+                                <span>25</span>
+                            </div>
+                            <div class="info-item" id="like">
+                                <img src="./img/icon/like.svg" alt="">
+                                <span>25</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+{% include "./partial/news-card.html" %}
+
+{% endblock %}

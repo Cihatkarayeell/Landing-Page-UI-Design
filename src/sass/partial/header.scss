@@ -1,0 +1,69 @@
+#header {
+	#navbar{
+		margin: auto;
+		margin-top: 3.5rem;
+		.brand-logo{
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: .7rem;
+		}
+		.navbar-list{
+			margin: 0 auto;
+			width: auto;
+			.navbar-list-ul{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: 0 auto;
+				.navbar-list-item a{
+					color: #202142;
+					font-size: 1.6rem;
+					opacity: .7;
+					font-weight: 500;
+					transition: 400ms ease;
+					padding: 1rem 1.8rem;
+					background-color: transparent;
+					&:hover{
+						background-color: #F1F1FD;
+						border-radius: 3.2rem;
+						color: #202142;
+						opacity: 1;
+					}
+				}
+			}
+		}
+		.navbar-buttons{
+			.log-in{
+				color: #202142;
+				font-size: 1.6rem;
+				padding: 1.5rem 3rem;
+				background-color: transparent;
+				border-radius: 1rem;
+				transition: 400ms ease;
+				&:hover{
+					background-color: #202142;
+					color: #FFFFFF;
+				}
+			}
+			.sign-up{
+				font-size: 1.6rem;
+				padding: 1.5rem 3rem;
+				border-radius: 1rem;
+				transition: 400ms ease;
+				background-color: #202142;
+				color: #FFFFFF;
+				&:hover{
+					background-color: transparent;
+					color: #202142;
+				}
+			}
+		}
+		.navbar-bottom-line{
+			width: 100%;
+			height: .1rem;
+			background-color: #EFEFFF;
+			margin-top: 3rem;
+		}
+	}
+}
